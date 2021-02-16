@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Timer</string>
+    <string name="doubleDot">:</string>
+    <string name="zero">0</string>
+    <string name="work">WORK</string>
+    <string name="min">min</string>
+    <string name="sec">sec</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="rest">REST</string>
+    <string name="numSet">NUN SET</string>
+    <string name="set">set</string>
+    <string name="next">NEXT</string>
+</resources>

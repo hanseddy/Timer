@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/popup_nav"
+    app:startDestination="@id/workTimePicker">
+
+    <fragment
+        android:id="@+id/workTimePicker"
+        android:name="com.example.timer.UI.PopUp.workTimePicker"
+        android:label="fragment_work_time_picker"
+        tools:layout="@layout/fragment_work_time_picker">
+        <action
+            android:id="@+id/action_workTimePicker_to_restTimePickers"
+            app:destination="@id/restTimePickers"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/restTimePickers"
+        android:name="com.example.timer.UI.PopUp.restTimePickers"
+        android:label="fragment_rest_time_pickers"
+        tools:layout="@layout/fragment_rest_time_pickers">
+        <action
+            android:id="@+id/action_restTimePickers_to_numSetPickers"
+            app:destination="@id/numSetPickers"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/numSetPickers"
+        android:name="com.example.timer.UI.PopUp.NumSetPickers"
+        android:label="fragment_num_set_pickers"
+        tools:layout="@layout/fragment_num_set_pickers">
+        <action
+            android:id="@+id/action_numSetPickers_to_workTimePicker"
+            app:destination="@id/workTimePicker"
+            app:exitAnim="@anim/fragment_close_exit" />
+    </fragment>
+</navigation>
